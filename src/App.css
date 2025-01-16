@@ -1,0 +1,40 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  overflow-x: hidden;
+}
+
+#header{
+  color: #D1C4A1;
+}
+
+.loader-outer{
+  background: linear-gradient(to bottom, #fdfce1, #dbd6a0);
+}
+
+
+.guest{
+  background: linear-gradient(to bottom, #fffce4, #f9f2b0);
+
+}
+
+.guest-selector-button:focus{
+  color: #EFE1C0 !important;
+  background-color: #D4AB67 !important;
+}
+
+.guest-page-decoration {
+  background: linear-gradient(to bottom,#fbf6c5, #fefced);
+  border-radius: 50%;
+  border: 2px solid #d8d4b4;
+  position: relative;
+}
+
+.decorator{
+  position: relative;
+  top:5x;
+}
