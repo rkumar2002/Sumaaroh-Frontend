@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import axios from "axios"; // Add this for API calls
+import axios from "axios"; 
 
 import ProgressBar from "./ProgressBar";
 import GuestSelector from "./GuestSelector";
@@ -49,6 +49,14 @@ function Guests() {
     
     return () => {
       window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  useEffect(() => {
+    document.body.style.overflowX = "hidden"; 
+
+    return () => {
+      document.body.style.overflowX = "auto";
     };
   }, []);
 

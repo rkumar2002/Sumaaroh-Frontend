@@ -6,27 +6,25 @@ import Header from "./Header";
 function Intro() {
   const navigate = useNavigate();
   const [exitAnimationTriggered, setExitAnimationTriggered] = useState(false);
-  const [cardPosition, setCardPosition] = useState({ top: 0 }); // For dynamic card positioning
-  const envelopeRef = useRef(null); // Ref to track envelope position
-  const cardRef = useRef(null); // Ref to track card position
+  const [cardPosition, setCardPosition] = useState({ top: 0 }); 
+  const envelopeRef = useRef(null);
+  const cardRef = useRef(null); 
 
-  // Calculate the position of the envelope and adjust card position accordingly
+  // Calculate the position of the envelope and adjust card position 
   useEffect(() => {
     const envelopeRect = envelopeRef.current?.getBoundingClientRect();
     if (envelopeRect) {
-      // Adjust the card to be slightly above the envelope
       setCardPosition({
-        top: envelopeRect.top - envelopeRect.height * 0.35, // Adjust to 35% above the envelope's height
+        top: envelopeRect.top - envelopeRect.height * 0.35, 
       });
     }
   }, []);
 
-  // Disable scrollbars globally
   useEffect(() => {
-    document.body.style.overflow = "hidden"; // Ensure body doesn't scroll
+    document.body.style.overflow = "hidden"; 
 
     return () => {
-      document.body.style.overflow = "auto"; // Re-enable scroll when component unmounts
+      document.body.style.overflow = "auto"; 
     };
   }, []);
 
@@ -73,45 +71,45 @@ function Intro() {
         style={{
           backgroundImage: "url('/images/Background.png')",
           backgroundRepeat: "no-repeat",
-          overflow: "hidden", // Ensure the container doesn't scroll
+          overflow: "hidden", 
         }}
       >
-        <Header /> {/* Header stays fixed at the top */}
+        <Header />
         <div
           className="relative flex items-center justify-center min-h-screen"
           style={{ overflow: "hidden" }}
         >
           {/* Envelope animation */}
           <motion.img
-            ref={envelopeRef} // Use ref to track envelope position
+            ref={envelopeRef} 
             src="/images/Letter.png"
             alt="envelope"
             variants={envelopeVariants}
             initial="hidden"
             animate={exitAnimationTriggered ? "exit" : "visible"}
             style={{
-              width: "35vw", // Responsive sizing for envelope
+              width: "35vw", 
               maxWidth: "350px",
-              position: "relative", // Relative to keep the card in sync
+              position: "relative", 
             }}
           />
 
           {/* Card animation */}
           <motion.img
-            ref={cardRef} // Use ref for card as well
+            ref={cardRef} 
             src="/images/Card.png"
             alt="card"
             variants={cardVariants}
             initial="hidden"
             animate={exitAnimationTriggered ? "exit" : "popOut"}
             style={{
-              width: "30vw", // Responsive sizing for card
+              width: "30vw",
               maxWidth: "300px",
-              position: "absolute", // Absolute to stick on the envelope
-              top: `${cardPosition.top}px`, // Dynamically set card position based on envelope
-              zIndex: 1, // Ensure card appears in front of the envelope
+              position: "absolute", 
+              top: `${cardPosition.top}px`, 
+              zIndex: 1, 
             }}
-            onAnimationComplete={() => handleExit()} // Start exit animation after popOut
+            onAnimationComplete={() => handleExit()}
           />
         </div>
       </div>

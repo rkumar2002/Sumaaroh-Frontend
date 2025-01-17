@@ -83,7 +83,14 @@ function Venues() {
     };
   }, []);
 
-  // Toggle venue selection
+  useEffect(() => {
+    document.body.style.overflowX = "hidden"; 
+
+    return () => {
+      document.body.style.overflowX = "auto";
+    };
+  }, []);
+
   function handleVenueSelect(title) {
     setSelectedVenues((prevSelectedVenues) => {
       if (prevSelectedVenues.includes(title)) {
@@ -205,11 +212,11 @@ function Venues() {
 
         {/* Right Div */}
         <motion.div
-          initial={{ x: "100%" }} // Start off-screen to the right
-          animate={{ x: 0 }} // Animate to its original position
-          transition={{ duration: 1 }} // Duration of the sliding animation
+          initial={{ x: "100%" }} 
+          animate={{ x: 0 }} 
+          transition={{ duration: 1 }} 
           className="w-full lg:w-2/5 p-4 hidden lg:flex flex-col min-h-screen bg-white rounded-l-3xl"
-          style={{ overflow: "hidden" }} // Prevent scrollbars during animation
+          style={{ overflow: "hidden" }} 
         >
           <Header />
           <div className="flex-grow flex justify-center items-center">

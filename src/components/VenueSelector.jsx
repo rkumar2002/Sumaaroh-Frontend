@@ -12,7 +12,7 @@ function VenueSelector({ image, title, subtitle, isSelected, onSelect }) {
         backgroundColor: "#fdfdfd",
         width: "100%",
         height: "100%",
-        borderWidth: "3px", // Apply static border width
+        borderWidth: "3px", 
       }}
       onClick={onSelect}
     >

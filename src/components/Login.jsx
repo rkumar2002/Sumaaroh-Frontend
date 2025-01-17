@@ -58,7 +58,6 @@ function Login() {
     }, 0);
   };
 
-  // Close modal function
   const closeModal = () => {
     setShowModal(false);
   };
@@ -124,8 +123,8 @@ function Login() {
             <div className="relative">
               <input
                 id="password"
-                ref={passwordRef} // Assign the ref to the password input
-                type={showPassword ? "text" : "password"} // Toggle input type between text and password
+                ref={passwordRef} 
+                type={showPassword ? "text" : "password"} 
                 className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}

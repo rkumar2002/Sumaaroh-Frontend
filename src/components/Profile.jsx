@@ -5,7 +5,6 @@ import axios from "axios";
 function Profile() {
   const navigate = useNavigate();
 
-  // State to store user info and preferences
   const [userInfo, setUserInfo] = useState({
     name: "",
     email: "",
@@ -21,7 +20,6 @@ function Profile() {
       const token = localStorage.getItem("token");
 
       try {
-        // Fetch user details (name and email)
         const userDetailsResponse = await axios.get(
           `${process.env.REACT_APP_BACKEND_BASE_URL}api/info/user-details`,
           {
@@ -34,7 +32,6 @@ function Profile() {
         const { name, email } = userDetailsResponse.data;
         setUserInfo({ name, email });
 
-        // Fetch user preferences (guest size and venues)
         const preferencesResponse = await axios.get(
           `${process.env.REACT_APP_BACKEND_BASE_URL}api/info/preferences`,
           {
@@ -70,7 +67,6 @@ function Profile() {
       }}
     >
       <div className="bg-white shadow-2xl rounded-lg w-full max-w-3xl p-8">
-        {/* Back Button */}
         <button
           onClick={handleGoBack}
           className="absolute top-4 left-4 text-blue-500 font-semibold hover:text-blue-700"
@@ -123,7 +119,7 @@ function Profile() {
                   ))}
                 </ul>
               ) : (
-                <span className="text-gray-400"> No venue preference set yet</span> // Message when no venues are set
+                <span className="text-gray-400"> No venue preference set yet</span> 
               )}
             </p>
           </div>

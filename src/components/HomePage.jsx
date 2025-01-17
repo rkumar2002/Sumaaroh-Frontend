@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import Loader from "./Loader";
@@ -8,6 +8,15 @@ const HomePage = () => {
   const [loading, setLoading] = useState(false);
   const [pageLoaded, setPageLoaded] = useState(true); 
   const navigate = useNavigate();
+
+  useEffect(() => {
+    document.body.style.overflowX = "hidden"; 
+
+    return () => {
+      document.body.style.overflowX = "auto";
+    };
+  }, []);
+
 
   const handleButtonClick = () => {
     setPageLoaded(false);
