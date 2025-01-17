@@ -72,7 +72,7 @@ function Loader({ text, image }) {
         className="h-72 w-72 lg:h-96 lg:w-96 rounded-full flex flex-col justify-center items-center"
         style={{ borderColor: "white", boxShadow: "0 0 40px 20px rgba(255, 255, 255, 0.6)" }}
       >
-        <img src={currentImage} className="mix-blend-darken w-8 lg:w-10" alt="eye" />
+        <img src={currentImage} className="mix-blend-darken w-8 lg:w-10" alt="" />
         <p style={{ color: "#B2AC87" }} className="px-10 text-center text-md md:text-lg lg:text-xl">
           {currentText}
         </p>
