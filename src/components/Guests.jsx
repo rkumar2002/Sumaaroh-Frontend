@@ -17,7 +17,7 @@ function Guests() {
   const [guestSize, setGuestSize] = useState("");
   const [initialGuestSize, setInitialGuestSize] = useState("");
   const [loading, setLoading] = useState(false);
-  const guestOptions = ["<100", "100-250", "250-500", "500-1000", ">1000"];
+  const guestOptions = [" < 100 ", " 100 - 250 ", " 250 - 500 ", " 500 - 1000 ", " > 1000 "];
 
 
   useEffect(() => {
@@ -109,9 +109,9 @@ function Guests() {
 
   return (
       <motion.div
-        initial={{ opacity: 0 }} 
+        initial={{ opacity: 0.6 }} 
         animate={{ opacity: 1 }} 
-        transition={{ duration: 1 }} 
+        transition={{ duration: 1 }}
         className="flex flex-col lg:flex-row min-h-screen guest"
       >
         {/* Left Div */}
@@ -138,7 +138,7 @@ function Guests() {
                 src="/images/Back Button.png"
                 width={30}
                 onClick={handleBack}
-                className="cursor-pointer"
+                className="cursor-pointer ml-5"
                 alt="Back"
               />
               <Header />
@@ -171,7 +171,7 @@ function Guests() {
               </div>
 
               <button
-                className="mt-5 bg-pink-600 hover:bg-pink-700 text-white px-24 py-4 rounded-lg mb-5"
+                className="mt-2 bg-pink-600 hover:bg-pink-700 text-white px-24 py-4 rounded-lg mb-5"
                 style={{ visibility: guestSize ? "visible" : "hidden" }}
                 onClick={handleNext}
               >
@@ -185,7 +185,8 @@ function Guests() {
         <motion.div
           initial={{ x: "100%" }} 
           animate={{ x: 0 }} 
-          transition={{ duration: 1 }}
+          transition={{ duration: 0.8 }}
+          exit={{ x : "100%" }} 
           className="w-full lg:w-2/5 p-4 hidden lg:flex flex-col min-h-screen bg-white rounded-l-3xl"
           style={{ overflowX: "hidden" }} 
         >

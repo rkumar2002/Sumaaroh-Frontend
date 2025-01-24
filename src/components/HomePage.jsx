@@ -94,7 +94,7 @@ const HomePage = () => {
 
             <div
               style={{ backgroundColor: "#FDFDFD" }}
-              className="rounded-3xl mt-3 py-5 px-4 lg:px-12 w-full max-w-md shadow-md"
+              className="rounded-3xl mt-3 py-5 px-4 lg:px-8 w-full max-w-md shadow-md"
             >
               <div className="flex items-center">
                 <img
@@ -116,7 +116,7 @@ const HomePage = () => {
 
             <div
               style={{ backgroundColor: "#FDFDFD" }}
-              className="rounded-3xl mt-3 py-5 px-4 lg:px-12 w-full max-w-md shadow-md"
+              className="rounded-3xl mt-3 py-5 px-4 lg:px-8 w-full max-w-md shadow-md"
             >
               <div className="flex items-center">
                 <img
@@ -141,8 +141,8 @@ const HomePage = () => {
               style={{
                 backgroundColor: "#FD5A90",
                 color: "#F7C8DC",
-                border: "1px solid #EC7478",
-                boxShadow: "0 4px 10px 0 #f1deb2",
+                border: "2px solid #EC7478",
+                boxShadow: "0 6px 10px 0 #f1deb9, 0 -6px 10px 0 #f1deb9",
               }}
               className="mt-5 mb-8 rounded-full px-14 py-3 w-full max-w-md"
             >

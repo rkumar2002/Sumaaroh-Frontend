@@ -5,14 +5,14 @@ function VenueSelector({ image, title, subtitle, isSelected, onSelect }) {
     <div
       className={`p-4 rounded-3xl text-center flex flex-col items-center cursor-pointer transition-all duration-200 ${
         isSelected
-          ? "border-[#e9dcb7] shadow-[0px_4px_15px_1px_rgba(227,208,144,0.6)]"
+          ? "border-[#c6ba95] shadow-[0px_3px_4px_1px_#e3cf8f]"
           : "border-[#FDFBEC] shadow-none"
       }`}
       style={{
         backgroundColor: "#fdfdfd",
         width: "100%",
         height: "100%",
-        borderWidth: "3px", 
+        borderWidth: "2px", 
       }}
       onClick={onSelect}
     >

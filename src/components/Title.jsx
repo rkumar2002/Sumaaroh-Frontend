@@ -8,13 +8,13 @@ function Title({step, title, subtitle}) {
       </span>
 
       <p
-        className="mt-8 font-semibold text-xl lg:text-3xl"
+        className="mt-3 font-semibold text-xl lg:text-3xl"
         style={{ fontFamily: "Times New Roman, serif" }}
       >
         {title}
       </p>
 
-      <p style={{ color: "#B7B39A" }} className="font-semibold mt-3">
+      <p style={{ color: "#B7B39A" }} className="font-semibold mt-2">
         {subtitle}
       </p>
     </>

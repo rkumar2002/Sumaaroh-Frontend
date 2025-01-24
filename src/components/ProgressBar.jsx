@@ -4,7 +4,7 @@ function ProgressBar({currentStep, totalSteps}) {
   return (
     <div className="h-2 mb-4 lg:rounded-full" style={{backgroundColor : "#fde07c"}}>
       <div
-        className= "h-2 lg:rounded-full"
+        className= "h-2 rounded-r-full lg:rounded-full"
         style={{
           width: `${progressPercentage}%`,
           transition: "width 0.3s ease-in-out",

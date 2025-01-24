@@ -170,7 +170,7 @@ function Venues() {
                 src="/images/Back Button.png"
                 width={30}
                 onClick={handleBack}
-                className="cursor-pointer"
+                className="cursor-pointer ml-5"
                 alt="Back"
               />
               <Header />
@@ -178,7 +178,7 @@ function Venues() {
           )}
 
           <div className="flex justify-center items-center flex-grow">
-            <div className="w-4/5 lg:w-3/5 text-center">
+            <div className="w-4/5 lg:w-3/5 text-center mt-5">
               <div>
                 <Title
                   step={`Step 3/6`}
@@ -200,7 +200,7 @@ function Venues() {
                 ))}
               </div>
               <button
-                className="mt-5 bg-pink-600 hover:bg-pink-700 text-white px-24 py-4 rounded-lg mb-5"
+                className="mt-5 bg-pink-600 hover:bg-pink-700 text-white px-24 py-4 rounded-full mb-5 w-3/5"
                 style={{ visibility: selectedVenues.length > 0 ? "visible" : "hidden" }}
                 onClick={handleNext}
               >

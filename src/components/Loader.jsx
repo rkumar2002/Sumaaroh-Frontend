@@ -27,9 +27,9 @@ function Loader({ text, image }) {
           setFadeOut(true); 
           setTimeout(() => {
             navigate("/venues"); 
-          }, 1000); 
-        }, 1500); 
-      }, 1000); 
+          }, 400); 
+        }, 600); 
+      }, 400); 
     }
 
     // Third Loader
@@ -40,9 +40,9 @@ function Loader({ text, image }) {
           setFadeOut(true); 
           setTimeout(() => {
             navigate("/outro");
-          }, 1000); 
-        }, 1500); 
-      }, 1000); 
+          }, 400); 
+        }, 600); 
+      }, 400); 
     }
 
     if (currentText === "Great, let our planners craft the perfect setting for your magical day.") {
@@ -52,9 +52,9 @@ function Loader({ text, image }) {
           setFadeOut(true); 
           setTimeout(() => {
             navigate("/guests");
-          }, 1000); 
-        }, 1000); 
-      }, 1000); 
+          }, 400); 
+        }, 400); 
+      }, 400); 
     }
 
   }, [currentText, navigate]);
@@ -68,7 +68,7 @@ function Loader({ text, image }) {
           y: fadeOut ? 0 : "0%" 
         }} 
         exit={{ opacity: 0 }} 
-        transition={{ duration: 0.8 }} 
+        transition={{ duration: 0.3 }} 
         className="h-72 w-72 lg:h-96 lg:w-96 rounded-full flex flex-col justify-center items-center"
         style={{ borderColor: "white", boxShadow: "0 0 40px 20px rgba(255, 255, 255, 0.6)" }}
       >
