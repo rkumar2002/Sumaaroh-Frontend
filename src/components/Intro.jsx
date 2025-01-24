@@ -34,12 +34,12 @@ function Intro() {
     visible: {
       y: "0%",
       opacity: 1,
-      transition: { duration: 1.5, ease: "easeOut" },
+      transition: { duration: 1, ease: "easeOut" },
     },
     exit: {
       y: "-100%",
       opacity: 0,
-      transition: { duration: 1.5, ease: "easeInOut" },
+      transition: { duration: 1, ease: "easeInOut" },
     },
   };
 
@@ -49,12 +49,12 @@ function Intro() {
     popOut: {
       y: "-25%",
       opacity: 1,
-      transition: { delay: 1.5, duration: 1, ease: "easeOut" },
+      transition: { delay: 1, duration: 1, ease: "easeOut" },
     },
     exit: {
       y: "-100%",
       opacity: 0,
-      transition: { duration: 1.5, ease: "easeInOut" },
+      transition: { duration: 1, ease: "easeInOut" },
     },
   };
 
